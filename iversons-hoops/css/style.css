@@ -40,8 +40,8 @@ a{color:inherit;text-decoration:none}
 .menu-pizza{left:-60px;top:130px;width:min(40vw,520px);height:min(40vw,520px);background-image:url('../assets/basketball-pizza.png');transform:rotate(-14deg);opacity:.42}
 .menu-wings{right:-50px;top:120px;width:min(35vw,450px);height:min(35vw,450px);background-image:url('../assets/iversons-ad.png');background-position:right center;transform:rotate(6deg);opacity:.34}
 .menu-content{position:relative;z-index:2}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:43px;position:relative;z-index:2;align-items:start}
-.card{border:1px solid rgba(247,240,228,.12);background:rgba(16,13,11,.88);padding:28px 25px;min-height:250px;position:relative;backdrop-filter:blur(2px);box-shadow:0 18px 30px rgba(0,0,0,.28);align-self:start}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:43px;position:relative;z-index:2}
+.card{border:1px solid rgba(247,240,228,.12);background:rgba(16,13,11,.88);padding:28px 25px;min-height:250px;position:relative;backdrop-filter:blur(2px);box-shadow:0 18px 30px rgba(0,0,0,.28)}
 .card:before{content:'';position:absolute;left:0;top:0;width:64px;height:6px;background:var(--orange)}
 .card:nth-child(even):before{background:var(--amber)}
 .card h3{font-size:2rem;text-transform:uppercase;margin:8px 0 14px;color:var(--cream)}
