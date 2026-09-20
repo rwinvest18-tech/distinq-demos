@@ -32,12 +32,16 @@ a{color:inherit;text-decoration:none}
 .sub{font:1rem/1.55 Arial,sans-serif;color:#cdbca7;max-width:500px;margin:18px 0 0}
 
 /* Menu */
-.menu{background:var(--char);position:relative;overflow:hidden}
+.menu{background:var(--char);position:relative;overflow:hidden;isolation:isolate}
 .menu:before{content:'PIZZA · SUBS · WINGS';position:absolute;right:-.03em;top:.1em;font-size:clamp(3rem,11vw,12rem);color:#211712;white-space:nowrap;pointer-events:none;z-index:0}
-.menu:after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,7,7,.78) 0%,rgba(7,7,7,.68) 50%,rgba(7,7,7,.78) 100%),url('../assets/basketball-pizza.png') left -90px center/460px auto no-repeat,url('../assets/iversons-ad.png') right -80px center/390px auto no-repeat;opacity:.48;pointer-events:none;z-index:0}
+.menu:after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(22,18,15,.95) 0%,rgba(22,18,15,.78) 22%,rgba(22,18,15,.58) 50%,rgba(22,18,15,.78) 78%,rgba(22,18,15,.95) 100%),radial-gradient(circle at 18% 42%,rgba(244,81,30,.18),transparent 34%),radial-gradient(circle at 84% 45%,rgba(255,175,25,.14),transparent 32%);z-index:1;pointer-events:none}
+.menu-bg-art{position:absolute;inset:0;z-index:0;pointer-events:none}
+.menu-food{position:absolute;background-size:contain;background-repeat:no-repeat;background-position:center;filter:drop-shadow(0 24px 35px rgba(0,0,0,.70)) saturate(1.15) contrast(1.05)}
+.menu-pizza{left:-60px;top:130px;width:min(40vw,520px);height:min(40vw,520px);background-image:url('../assets/basketball-pizza.png');transform:rotate(-14deg);opacity:.42}
+.menu-wings{right:-50px;top:120px;width:min(35vw,450px);height:min(35vw,450px);background-image:url('../assets/iversons-ad.png');background-position:right center;transform:rotate(6deg);opacity:.34}
 .menu-content{position:relative;z-index:2}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:43px}
-.card{border:1px solid var(--line);background:rgba(16,13,11,.94);padding:28px 25px;min-height:250px;position:relative;backdrop-filter:blur(2px);box-shadow:0 10px 30px rgba(0,0,0,.2)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:43px;position:relative;z-index:2}
+.card{border:1px solid rgba(247,240,228,.12);background:rgba(16,13,11,.88);padding:28px 25px;min-height:250px;position:relative;backdrop-filter:blur(2px);box-shadow:0 18px 30px rgba(0,0,0,.28)}
 .card:before{content:'';position:absolute;left:0;top:0;width:64px;height:6px;background:var(--orange)}
 .card:nth-child(even):before{background:var(--amber)}
 .card h3{font-size:2rem;text-transform:uppercase;margin:8px 0 14px;color:var(--cream)}
@@ -46,7 +50,7 @@ a{color:inherit;text-decoration:none}
 .card li{display:flex;justify-content:space-between;gap:16px;padding:9px 0;border-top:1px dashed #4a3022}
 .card li span{padding-right:8px}
 .card b{color:var(--amber);white-space:nowrap}
-.topping-copy{margin-top:21px;font:800 .91rem/1.8 Arial,sans-serif;letter-spacing:.03em;color:#eadbc7}
+.topping-copy{margin-top:18px;font:800 .9rem/1.8 Arial,sans-serif;color:#f0ddc9;text-transform:uppercase;letter-spacing:.05em}
 
 .delivery{background:var(--orange);color:var(--black)}
 .delivery-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:55px;align-items:center}
@@ -84,7 +88,7 @@ a{color:inherit;text-decoration:none}
   .hero:after{background:linear-gradient(90deg,#070707 0%,rgba(7,7,7,.94) 48%,rgba(7,7,7,.42)),linear-gradient(0deg,rgba(7,7,7,.65),transparent 40%)}
   .hero-inner{padding-top:80px}
   .cards,.delivery-grid,.flavor-grid,.visit-grid{grid-template-columns:1fr}
-  .menu:after{background:linear-gradient(180deg,rgba(7,7,7,.84) 0%,rgba(7,7,7,.72) 100%),url('../assets/basketball-pizza.png') left -95px top 100px/330px auto no-repeat,url('../assets/iversons-ad.png') right -105px bottom 80px/300px auto no-repeat;opacity:.35}
+  .menu-pizza{left:-110px;top:90px;width:340px;height:340px;opacity:.26}.menu-wings{right:-100px;top:auto;bottom:70px;width:300px;height:300px;opacity:.24}.menu:after{background:linear-gradient(180deg,rgba(22,18,15,.95) 0%,rgba(22,18,15,.80) 40%,rgba(22,18,15,.92) 100%)}
   .delivery-grid,.flavor-grid{gap:35px}
   .ad{justify-self:start;max-width:310px}
   .visit-actions{justify-content:start}
