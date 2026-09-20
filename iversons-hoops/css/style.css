@@ -30,18 +30,24 @@ a{color:inherit;text-decoration:none}
 .heading{font-size:clamp(3rem,6vw,5.6rem);line-height:.84;text-transform:uppercase;margin:0;color:var(--cream)}
 .heading .hot{color:var(--orange)}
 .sub{font:1rem/1.55 Arial,sans-serif;color:#cdbca7;max-width:500px;margin:18px 0 0}
-.menu{background:var(--char);position:relative}
-.menu:before{content:'PIZZA · SUBS · WINGS';position:absolute;right:-.03em;top:.1em;font-size:clamp(3rem,11vw,12rem);color:#211712;white-space:nowrap;pointer-events:none}
-.menu-content{position:relative}
+
+/* Menu */
+.menu{background:var(--char);position:relative;overflow:hidden}
+.menu:before{content:'PIZZA · SUBS · WINGS';position:absolute;right:-.03em;top:.1em;font-size:clamp(3rem,11vw,12rem);color:#211712;white-space:nowrap;pointer-events:none;z-index:0}
+.menu:after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,7,7,.78) 0%,rgba(7,7,7,.68) 50%,rgba(7,7,7,.78) 100%),url('../assets/basketball-pizza.png') left -90px center/460px auto no-repeat,url('../assets/iversons-ad.png') right -80px center/390px auto no-repeat;opacity:.48;pointer-events:none;z-index:0}
+.menu-content{position:relative;z-index:2}
 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:43px}
-.card{border:1px solid var(--line);background:#100d0b;padding:28px 25px;min-height:250px;position:relative}
+.card{border:1px solid var(--line);background:rgba(16,13,11,.94);padding:28px 25px;min-height:250px;position:relative;backdrop-filter:blur(2px);box-shadow:0 10px 30px rgba(0,0,0,.2)}
 .card:before{content:'';position:absolute;left:0;top:0;width:64px;height:6px;background:var(--orange)}
-.card:nth-child(2):before{background:var(--amber)}
+.card:nth-child(even):before{background:var(--amber)}
 .card h3{font-size:2rem;text-transform:uppercase;margin:8px 0 14px;color:var(--cream)}
 .card p{min-height:42px;font:.95rem/1.45 Arial,sans-serif;color:#cdbca7}
 .card ul{list-style:none;margin:21px 0 0;padding:0;font:800 .91rem Arial,sans-serif;letter-spacing:.03em}
-.card li{display:flex;justify-content:space-between;padding:9px 0;border-top:1px dashed #4a3022}
-.card b{color:var(--amber)}
+.card li{display:flex;justify-content:space-between;gap:16px;padding:9px 0;border-top:1px dashed #4a3022}
+.card li span{padding-right:8px}
+.card b{color:var(--amber);white-space:nowrap}
+.topping-copy{margin-top:21px;font:800 .91rem/1.8 Arial,sans-serif;letter-spacing:.03em;color:#eadbc7}
+
 .delivery{background:var(--orange);color:var(--black)}
 .delivery-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:55px;align-items:center}
 .delivery .heading{color:var(--black);text-shadow:3px 3px 0 var(--cream)}
@@ -70,5 +76,30 @@ a{color:inherit;text-decoration:none}
 .footer p,.legal{font:.85rem/1.5 Arial,sans-serif;color:#a89179}
 .legal{border-top:1px solid #302119;padding-top:18px;margin-top:31px}
 .legal a{color:var(--amber)}
-@media(max-width:800px){.links{display:none}.hero{min-height:620px}.hero-img{background-size:720px auto;background-position:110% 51%;opacity:.75}.hero:after{background:linear-gradient(90deg,#070707 0%,rgba(7,7,7,.94) 48%,rgba(7,7,7,.42)),linear-gradient(0deg,rgba(7,7,7,.65),transparent 40%)}.hero-inner{padding-top:80px}.cards,.delivery-grid,.flavor-grid,.visit-grid{grid-template-columns:1fr}.delivery-grid,.flavor-grid{gap:35px}.ad{justify-self:start;max-width:310px}.visit-actions{justify-content:start}.footer-top{flex-direction:column}.section{padding:68px 0}}
-@media(max-width:480px){.wrap,.hero-inner{padding-left:20px;padding-right:20px}.logo{font-size:1.35rem}.logo i{font-size:1.65rem}.order{font-size:.68rem;padding:11px}.hero h1{font-size:4rem}.flavor-list{grid-template-columns:1fr}.top{font-size:.67rem}.heading{font-size:3.2rem}}
+
+@media(max-width:800px){
+  .links{display:none}
+  .hero{min-height:620px}
+  .hero-img{background-size:720px auto;background-position:110% 51%;opacity:.75}
+  .hero:after{background:linear-gradient(90deg,#070707 0%,rgba(7,7,7,.94) 48%,rgba(7,7,7,.42)),linear-gradient(0deg,rgba(7,7,7,.65),transparent 40%)}
+  .hero-inner{padding-top:80px}
+  .cards,.delivery-grid,.flavor-grid,.visit-grid{grid-template-columns:1fr}
+  .menu:after{background:linear-gradient(180deg,rgba(7,7,7,.84) 0%,rgba(7,7,7,.72) 100%),url('../assets/basketball-pizza.png') left -95px top 100px/330px auto no-repeat,url('../assets/iversons-ad.png') right -105px bottom 80px/300px auto no-repeat;opacity:.35}
+  .delivery-grid,.flavor-grid{gap:35px}
+  .ad{justify-self:start;max-width:310px}
+  .visit-actions{justify-content:start}
+  .footer-top{flex-direction:column}
+  .section{padding:68px 0}
+}
+@media(max-width:480px){
+  .wrap,.hero-inner{padding-left:20px;padding-right:20px}
+  .logo{font-size:1.35rem}
+  .logo i{font-size:1.65rem}
+  .order{font-size:.68rem;padding:11px}
+  .hero h1{font-size:4rem}
+  .flavor-list{grid-template-columns:1fr}
+  .top{font-size:.67rem}
+  .heading{font-size:3.2rem}
+  .card{padding:24px 20px}
+  .card h3{font-size:1.7rem}
+}
