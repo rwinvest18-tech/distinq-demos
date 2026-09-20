@@ -1,0 +1,74 @@
+:root{--black:#070707;--char:#16120f;--orange:#f4511e;--amber:#ffaf19;--red:#9c231a;--cream:#f7f0e4;--white:#fffdf7;--line:#4b2a1a}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--black);color:var(--cream);font-family:Impact,Haettenschweiler,'Arial Narrow Bold',sans-serif;letter-spacing:.015em}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1200px;margin:auto;padding:0 30px}
+.top{height:39px;background:var(--orange);display:flex;align-items:center;justify-content:center;color:var(--black);font:800 .8rem/1 Arial,sans-serif;letter-spacing:.13em;text-transform:uppercase}
+.nav{height:87px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{color:var(--white);font-family:Georgia,serif;font-size:1.65rem;font-style:italic;font-weight:900;letter-spacing:-.08em}
+.logo i{display:inline-block;color:var(--cream);font-style:normal;font-family:Georgia,serif;font-size:2rem;font-weight:900;line-height:1;text-shadow:-2px 0 var(--orange),0 2px var(--orange),2px 0 var(--orange),0 -2px var(--orange);margin-right:-.08em}
+.links{display:flex;gap:28px;font:800 .82rem Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase}
+.links a:hover{color:var(--amber)}
+.order{padding:13px 17px;background:var(--orange);color:var(--black);font:900 .78rem Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;clip-path:polygon(10px 0,100% 0,calc(100% - 10px) 100%,0 100%)}
+.hero{position:relative;overflow:hidden;min-height:650px;border-top:1px solid #332117;border-bottom:1px solid #332117}
+.hero:after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,#070707 0%,rgba(7,7,7,.96) 34%,rgba(7,7,7,.34) 65%,rgba(7,7,7,.12)),linear-gradient(0deg,rgba(7,7,7,.7),transparent 40%);pointer-events:none}
+.hero-img{position:absolute;inset:0;background:url('../assets/basketball-pizza.png') 82% 48%/min(760px,71vw) auto no-repeat;filter:saturate(1.1)}
+.hero-inner{position:relative;z-index:1;padding:105px 30px 85px}
+.eyebrow{color:var(--amber);font:900 .8rem Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase}
+.hero h1{font-size:clamp(4.3rem,10.5vw,8.3rem);line-height:.78;text-transform:uppercase;max-width:680px;margin:19px 0;color:var(--cream);text-shadow:5px 5px 0 var(--red)}
+.hero h1 em{color:var(--orange);font-style:normal}
+.hero p{max-width:430px;font:1.08rem/1.55 Arial,sans-serif;letter-spacing:0;color:#e9d9c6}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:29px}
+.btn{padding:16px 22px;display:inline-block;font:900 .82rem Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase;clip-path:polygon(9px 0,100% 0,calc(100% - 9px) 100%,0 100%)}
+.btn.orange{background:var(--orange);color:var(--black)}
+.btn.outline{border:1px solid var(--cream);color:var(--cream)}
+.btn.dark{background:#070707;color:#fffdf7}
+.ticker{overflow:hidden;background:var(--amber);color:var(--black);white-space:nowrap;padding:15px 0;font-size:1.2rem;letter-spacing:.06em;text-transform:uppercase}
+.ticker span{padding-right:36px}
+.section{padding:95px 0}
+.heading{font-size:clamp(3rem,6vw,5.6rem);line-height:.84;text-transform:uppercase;margin:0;color:var(--cream)}
+.heading .hot{color:var(--orange)}
+.sub{font:1rem/1.55 Arial,sans-serif;color:#cdbca7;max-width:500px;margin:18px 0 0}
+.menu{background:var(--char);position:relative}
+.menu:before{content:'PIZZA · SUBS · WINGS';position:absolute;right:-.03em;top:.1em;font-size:clamp(3rem,11vw,12rem);color:#211712;white-space:nowrap;pointer-events:none}
+.menu-content{position:relative}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:43px}
+.card{border:1px solid var(--line);background:#100d0b;padding:28px 25px;min-height:250px;position:relative}
+.card:before{content:'';position:absolute;left:0;top:0;width:64px;height:6px;background:var(--orange)}
+.card:nth-child(2):before{background:var(--amber)}
+.card h3{font-size:2rem;text-transform:uppercase;margin:8px 0 14px;color:var(--cream)}
+.card p{min-height:42px;font:.95rem/1.45 Arial,sans-serif;color:#cdbca7}
+.card ul{list-style:none;margin:21px 0 0;padding:0;font:800 .91rem Arial,sans-serif;letter-spacing:.03em}
+.card li{display:flex;justify-content:space-between;padding:9px 0;border-top:1px dashed #4a3022}
+.card b{color:var(--amber)}
+.delivery{background:var(--orange);color:var(--black)}
+.delivery-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:55px;align-items:center}
+.delivery .heading{color:var(--black);text-shadow:3px 3px 0 var(--cream)}
+.delivery .sub{color:#29130b;font-weight:600}
+.delivery-eyebrow{color:#6c160f}
+.delivery-callout{border:4px solid var(--black);padding:29px;background:var(--cream);box-shadow:11px 11px 0 var(--black)}
+.delivery-callout p{font:1.08rem/1.5 Arial,sans-serif;letter-spacing:0;margin:0}
+.delivery-callout strong{display:block;font-size:2.5rem;line-height:.9;text-transform:uppercase;margin-bottom:14px}
+.delivery-callout a{display:inline-block;margin-top:20px;font:900 .85rem Arial,sans-serif;letter-spacing:.11em;text-transform:uppercase;padding:13px 17px;background:var(--black);color:var(--cream)}
+.flavors{background:#0c0c0c}
+.flavor-grid{display:grid;grid-template-columns:1fr 370px;gap:55px;align-items:center}
+.flavor-list{display:grid;grid-template-columns:repeat(2,1fr);gap:11px;margin-top:31px}
+.flavor{border:1px solid #62301d;background:#120c09;color:var(--cream);padding:18px;font-size:1.3rem;text-transform:uppercase}
+.flavor:nth-child(odd){border-left:8px solid var(--orange)}
+.flavor:nth-child(even){border-left:8px solid var(--amber)}
+.ad{width:100%;max-width:370px;justify-self:end;border:3px solid var(--orange);box-shadow:12px 12px 0 var(--red)}
+.visit{background:var(--cream);color:var(--black)}
+.visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:end}
+.visit .heading{color:var(--black)}
+.visit .sub{color:#4d3325}
+.visit-eyebrow{color:#9c231a}
+.visit-details{border-top:6px solid var(--orange);margin-top:32px;padding-top:19px;font:800 1.3rem/1.38 Arial,sans-serif;letter-spacing:.01em}
+.visit-actions{display:flex;gap:12px;flex-wrap:wrap;justify-content:end}
+.footer{background:var(--black);padding:44px 0 28px;border-top:1px solid var(--line)}
+.footer-top{display:flex;justify-content:space-between;gap:30px;align-items:flex-start}
+.footer p,.legal{font:.85rem/1.5 Arial,sans-serif;color:#a89179}
+.legal{border-top:1px solid #302119;padding-top:18px;margin-top:31px}
+.legal a{color:var(--amber)}
+@media(max-width:800px){.links{display:none}.hero{min-height:620px}.hero-img{background-size:720px auto;background-position:110% 51%;opacity:.75}.hero:after{background:linear-gradient(90deg,#070707 0%,rgba(7,7,7,.94) 48%,rgba(7,7,7,.42)),linear-gradient(0deg,rgba(7,7,7,.65),transparent 40%)}.hero-inner{padding-top:80px}.cards,.delivery-grid,.flavor-grid,.visit-grid{grid-template-columns:1fr}.delivery-grid,.flavor-grid{gap:35px}.ad{justify-self:start;max-width:310px}.visit-actions{justify-content:start}.footer-top{flex-direction:column}.section{padding:68px 0}}
+@media(max-width:480px){.wrap,.hero-inner{padding-left:20px;padding-right:20px}.logo{font-size:1.35rem}.logo i{font-size:1.65rem}.order{font-size:.68rem;padding:11px}.hero h1{font-size:4rem}.flavor-list{grid-template-columns:1fr}.top{font-size:.67rem}.heading{font-size:3.2rem}}
