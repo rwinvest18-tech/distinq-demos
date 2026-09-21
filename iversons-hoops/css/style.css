@@ -102,3 +102,7 @@ a{color:inherit;text-decoration:none}
   .card{padding:24px 20px}
   .card h3{font-size:1.7rem}
 }
+
+/* Dark food backdrop behind the menu */
+.menu{background:var(--char) url('../iversons-menu-backdrop.png') center center/cover no-repeat}
+@media(max-width:800px){.menu{background-position:center center}}
