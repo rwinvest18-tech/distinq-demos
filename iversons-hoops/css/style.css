@@ -1,4 +1,4 @@
-:root{--black:#070707;--char:#16120f;--orange:#f4511e;--amber:#ffaf19;--red:#9c231a;--cream:#f7f0e4;--white:#fffdf7;--line:#4b2a1a}
+:root{--black:#030303;--char:#07151a;--orange:#f15a0a;--amber:#f4ad20;--red:#a92116;--teal:#007e89;--cream:#fff7e8;--white:#fffdf7;--line:#542010}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--black);color:var(--cream);font-family:Impact,Haettenschweiler,'Arial Narrow Bold',sans-serif;letter-spacing:.015em}
@@ -10,7 +10,7 @@ a{color:inherit;text-decoration:none}
 .logo i{display:inline-block;color:var(--cream);font-style:normal;font-family:Georgia,serif;font-size:2rem;font-weight:900;line-height:1;text-shadow:-2px 0 var(--orange),0 2px var(--orange),2px 0 var(--orange),0 -2px var(--orange);margin-right:-.08em}
 .links{display:flex;gap:28px;font:800 .82rem Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase}
 .links a:hover{color:var(--amber)}
-.order{padding:13px 17px;background:var(--orange);color:var(--black);font:900 .78rem Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;clip-path:polygon(10px 0,100% 0,calc(100% - 10px) 100%,0 100%)}
+.order{padding:13px 17px;background:var(--red);color:var(--cream);font:900 .78rem Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;clip-path:polygon(10px 0,100% 0,calc(100% - 10px) 100%,0 100%)}
 .hero{position:relative;overflow:hidden;min-height:650px;border-top:1px solid #332117;border-bottom:1px solid #332117}
 .hero:after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,#070707 0%,rgba(7,7,7,.96) 34%,rgba(7,7,7,.34) 65%,rgba(7,7,7,.12)),linear-gradient(0deg,rgba(7,7,7,.7),transparent 40%);pointer-events:none}
 .hero-img{position:absolute;inset:0;background:url('../assets/basketball-pizza.png') 82% 48%/min(760px,71vw) auto no-repeat;filter:saturate(1.1)}
@@ -21,7 +21,7 @@ a{color:inherit;text-decoration:none}
 .hero p{max-width:430px;font:1.08rem/1.55 Arial,sans-serif;letter-spacing:0;color:#e9d9c6}
 .hero-ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:29px}
 .btn{padding:16px 22px;display:inline-block;font:900 .82rem Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase;clip-path:polygon(9px 0,100% 0,calc(100% - 9px) 100%,0 100%)}
-.btn.orange{background:var(--orange);color:var(--black)}
+.btn.orange{background:var(--red);color:var(--cream)}
 .btn.outline{border:1px solid var(--cream);color:var(--cream)}
 .btn.dark{background:#070707;color:#fffdf7}
 .ticker{overflow:hidden;background:var(--amber);color:var(--black);white-space:nowrap;padding:15px 0;font-size:1.2rem;letter-spacing:.06em;text-transform:uppercase}
@@ -33,8 +33,8 @@ a{color:inherit;text-decoration:none}
 
 /* Menu */
 .menu{background:var(--char);position:relative;overflow:hidden;isolation:isolate}
-.menu:before{content:'PIZZA · SUBS · WINGS';position:absolute;right:-.03em;top:.1em;font-size:clamp(3rem,11vw,12rem);color:#211712;white-space:nowrap;pointer-events:none;z-index:0}
-.menu:after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(22,18,15,.58) 0%,rgba(22,18,15,.46) 22%,rgba(22,18,15,.38) 50%,rgba(22,18,15,.46) 78%,rgba(22,18,15,.58) 100%),radial-gradient(circle at 18% 42%,rgba(244,81,30,.18),transparent 34%),radial-gradient(circle at 84% 45%,rgba(255,175,25,.14),transparent 32%);z-index:1;pointer-events:none}
+.menu:before{content:'PIZZA · SUBS · WINGS';position:absolute;right:-.03em;top:.1em;font-size:clamp(3rem,11vw,12rem);color:#0c252b;white-space:nowrap;pointer-events:none;z-index:0}
+.menu:after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,21,26,.68) 0%,rgba(7,21,26,.48) 22%,rgba(7,21,26,.38) 50%,rgba(7,21,26,.48) 78%,rgba(7,21,26,.68) 100%),radial-gradient(circle at 18% 42%,rgba(241,90,10,.18),transparent 34%),radial-gradient(circle at 84% 45%,rgba(0,126,137,.18),transparent 32%);z-index:1;pointer-events:none}
 .menu-content{position:relative;z-index:2}
 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:43px;position:relative;z-index:2}
 .menu-group{margin-top:44px;position:relative;z-index:2}
@@ -46,6 +46,7 @@ a{color:inherit;text-decoration:none}
 .menu-group .cards{margin-top:20px}
 .cards-subs{grid-template-columns:repeat(2,minmax(0,1fr))}
 .cards-wings{grid-template-columns:minmax(0,1fr);max-width:390px}
+.cards-wings .card:before{background:var(--teal)}
 .card{border:1px solid rgba(247,240,228,.12);background:rgba(16,13,11,.88);padding:28px 25px;min-height:250px;position:relative;backdrop-filter:blur(2px);box-shadow:0 18px 30px rgba(0,0,0,.28)}
 .card:before{content:'';position:absolute;left:0;top:0;width:64px;height:6px;background:var(--orange)}
 .card:nth-child(even):before{background:var(--amber)}
@@ -66,12 +67,12 @@ a{color:inherit;text-decoration:none}
 .delivery-callout p{font:1.08rem/1.5 Arial,sans-serif;letter-spacing:0;margin:0}
 .delivery-callout strong{display:block;font-size:2.5rem;line-height:.9;text-transform:uppercase;margin-bottom:14px}
 .delivery-callout a{display:inline-block;margin-top:20px;font:900 .85rem Arial,sans-serif;letter-spacing:.11em;text-transform:uppercase;padding:13px 17px;background:var(--black);color:var(--cream)}
-.flavors{background:#0c0c0c}
+.flavors{background:#041016}
 .flavor-grid{display:grid;grid-template-columns:1fr 370px;gap:55px;align-items:center}
 .flavor-list{display:grid;grid-template-columns:repeat(2,1fr);gap:11px;margin-top:31px}
-.flavor{border:1px solid #62301d;background:#120c09;color:var(--cream);padding:18px;font-size:1.3rem;text-transform:uppercase}
+.flavor{border:1px solid #5d2512;background:#06161c;color:var(--cream);padding:18px;font-size:1.3rem;text-transform:uppercase}
 .flavor:nth-child(odd){border-left:8px solid var(--orange)}
-.flavor:nth-child(even){border-left:8px solid var(--amber)}
+.flavor:nth-child(even){border-left:8px solid var(--teal)}
 .ad{width:100%;max-width:370px;justify-self:end;border:3px solid var(--orange);box-shadow:12px 12px 0 var(--red)}
 .visit{background:var(--cream);color:var(--black)}
 .visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:end}
