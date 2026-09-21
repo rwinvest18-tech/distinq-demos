@@ -73,6 +73,8 @@ a{color:inherit;text-decoration:none}
 .visit-actions{display:flex;gap:12px;flex-wrap:wrap;justify-content:end}
 .footer{background:var(--black);padding:44px 0 28px;border-top:1px solid var(--line)}
 .footer-top{display:flex;justify-content:space-between;gap:30px;align-items:flex-start}
+.footer-top>div:first-child{width:180px;display:flex;flex-direction:column;align-items:center;text-align:center}
+.footer-top>div:first-child p{margin:10px 0 0;text-align:center}
 .footer p,.legal{font:.85rem/1.5 Arial,sans-serif;color:#a89179}
 .legal{border-top:1px solid #302119;padding-top:18px;margin-top:31px}
 .legal a{color:var(--amber)}
