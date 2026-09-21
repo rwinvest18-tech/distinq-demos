@@ -17,7 +17,7 @@ a{color:inherit;text-decoration:none}
 .hero-inner{position:relative;z-index:1;padding:105px 30px 85px}
 .eyebrow{color:var(--amber);font:900 .8rem Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase}
 .hero h1{font-size:clamp(4.3rem,10.5vw,8.3rem);line-height:.78;text-transform:uppercase;max-width:680px;margin:19px 0;color:var(--cream);text-shadow:5px 5px 0 var(--red)}
-.hero h1 em{color:var(--cream);font-style:normal}
+.hero h1 em{color:var(--red);font-style:normal;text-shadow:5px 5px 0 var(--cream)}
 .hero p{max-width:430px;font:1.08rem/1.55 Arial,sans-serif;letter-spacing:0;color:#e9d9c6}
 .hero-ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:29px}
 .btn{padding:16px 22px;display:inline-block;font:900 .82rem Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase;clip-path:polygon(9px 0,100% 0,calc(100% - 9px) 100%,0 100%)}
