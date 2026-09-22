@@ -12,9 +12,10 @@ a{color:inherit;text-decoration:none}
 .links a:hover{color:var(--amber)}
 .order{padding:13px 17px;background:var(--red);color:var(--cream);font:900 .78rem Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;clip-path:polygon(10px 0,100% 0,calc(100% - 10px) 100%,0 100%)}
 .hero{position:relative;overflow:hidden;min-height:650px;border-top:1px solid #332117;border-bottom:1px solid #332117}
-.hero:after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,#070707 0%,rgba(7,7,7,.96) 34%,rgba(7,7,7,.34) 65%,rgba(7,7,7,.12)),linear-gradient(0deg,rgba(7,7,7,.7),transparent 40%);pointer-events:none}
-.hero-img{position:absolute;inset:0;background:url('../assets/basketball-pizza.png') 82% 48%/min(760px,71vw) auto no-repeat;filter:saturate(1.1)}
-.hero-inner{position:relative;z-index:1;padding:105px 30px 85px}
+.hero:after{content:'';position:absolute;inset:0;z-index:0;background:linear-gradient(90deg,#070707 0%,rgba(7,7,7,.96) 34%,rgba(7,7,7,.34) 65%,rgba(7,7,7,.12)),linear-gradient(0deg,rgba(7,7,7,.7),transparent 40%);pointer-events:none}
+.hero-logo{position:absolute;inset:0;z-index:1;display:flex;align-items:center;justify-content:flex-end;padding:0 clamp(26px,6vw,105px);pointer-events:none}
+.hero-logo img{display:block;width:min(650px,52vw);height:auto;filter:drop-shadow(0 18px 24px rgba(0,0,0,.6))}
+.hero-inner{position:relative;z-index:2;padding:105px 30px 85px}
 .eyebrow{color:var(--amber);font:900 .8rem Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase}
 .hero h1{font-size:clamp(4.3rem,10.5vw,8.3rem);line-height:.78;text-transform:uppercase;max-width:680px;margin:19px 0;color:var(--cream);text-shadow:5px 5px 0 var(--red)}
 .hero h1 em{color:var(--red);font-style:normal;text-shadow:5px 5px 0 var(--cream)}
@@ -92,7 +93,8 @@ a{color:inherit;text-decoration:none}
 @media(max-width:800px){
   .links{display:none}
   .hero{min-height:620px}
-  .hero-img{background-size:720px auto;background-position:110% 51%;opacity:.75}
+  .hero-logo{justify-content:center;padding:0;opacity:.43}
+  .hero-logo img{width:min(600px,94vw)}
   .hero:after{background:linear-gradient(90deg,#070707 0%,rgba(7,7,7,.94) 48%,rgba(7,7,7,.42)),linear-gradient(0deg,rgba(7,7,7,.65),transparent 40%)}
   .hero-inner{padding-top:80px}
   .cards,.delivery-grid,.flavor-grid,.visit-grid{grid-template-columns:1fr}.menu:after{background:linear-gradient(180deg,rgba(22,18,15,.58) 0%,rgba(22,18,15,.54) 40%,rgba(22,18,15,.68) 100%)}
